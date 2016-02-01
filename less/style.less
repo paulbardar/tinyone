@@ -62,7 +62,7 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-	min-width: 65%;
+	min-width: 62%;
 	border-radius:5px;
 	border: 5px solid transparent;
 	height: 50px;
@@ -99,6 +99,7 @@ textarea {
 	padding-right: 10px;
 	max-width: 960px;
 }
+
 /* ba-home */
 .ba-home{
 	background: @primary-color;
@@ -193,5 +194,125 @@ textarea {
 	@media @small and @medium{
 		margin-top: 10px;
 		margin-right: 0;
+	}
+}
+/* ba-features */
+.ba-features {
+	padding: 100px 0 160px;
+	text-align: center;
+	h2{
+		margin: 0;
+	}
+}
+.ba-features__textblock {
+	max-width: 740px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+.ba-features__item {
+	text-align: left;
+	i {
+		float: left;
+		font-size: 50px;
+		line-height: 120px;
+		height: 150px;
+		margin-top: 15px;
+		vertical-align: top;
+		display: inline-block;
+		width: 25%;
+	}
+	h3 {
+		font-size: 22px;
+		color: @secondary-color;
+		margin-bottom: 5px;
+	}
+	p {
+		color: #898989;
+		font-size: 16px;
+	}
+}
+// subscribe
+
+.ba-subscribe{
+	text-align: center;
+	background: @secondary-color;
+	color: #FFF;
+	padding: 85px 0 140px;
+}
+.ba-title--color{
+	color: @primary-color;
+	margin: 0;
+	& + p{
+		color: #898989;
+		font-size: 20px;
+		max-width: 740px;
+		margin: 15px auto 35px;
+	}
+}
+.ba-socials{
+	text-align: center;
+	padding: 75px 0;
+	margin-left: -25px;
+	a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: @primary-color;
+	color: @secondary-color;
+	margin-right: 20px;
+
+		i{
+		font-size: 30px;
+		font-weight: 400;
+		text-align: center;
+		padding-top: 8px;
+		}
+	&:hover{
+		background-color: darken(@primary-color, 20%);
+		color: lighten(@secondary-color, 60%);
+	}
+	}
+
+}
+.ba-footer{
+	padding-top: 35px;
+	border-top: 1px solid #fff;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 16px;
+}
+.ba-footer__items{
+	@media (max-width:480px){
+			margin: auto;
+			text-align: center;
+		}
+	h4{
+		font-size: 16px;
+		font-weight: 400;
+		margin-top: 15px;
+		margin-bottom: 0;
+
+	}
+	address{
+		font-style: normal;
+		margin-bottom: 5px;
+	}
+	a{
+		display: block;
+		text-decoration: none;
+		color: #FFF;
+		padding-bottom: 2px;
+		&:hover{
+			color: saturate(@primary-color, 80%);
+		}
+	}
+	li{
+	list-style:none;
+	@media (min-width:480px) and (max-width:759px){
+			margin: auto;
+			display: inline-block;
+			text-align: center;
+		}
 	}
 }

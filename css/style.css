@@ -749,7 +749,7 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-  min-width: 65%;
+  min-width: 62%;
   border-radius: 5px;
   border: 5px solid transparent;
   height: 50px;
@@ -891,6 +891,123 @@ select:focus {
   .ba-description__img {
     margin-top: 10px;
     margin-right: 0;
+  }
+}
+/* ba-features */
+.ba-features {
+  padding: 100px 0 160px;
+  text-align: center;
+}
+.ba-features h2 {
+  margin: 0;
+}
+.ba-features__textblock {
+  max-width: 740px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.ba-features__item {
+  text-align: left;
+}
+.ba-features__item i {
+  float: left;
+  font-size: 50px;
+  line-height: 120px;
+  height: 150px;
+  margin-top: 15px;
+  vertical-align: top;
+  display: inline-block;
+  width: 25%;
+}
+.ba-features__item h3 {
+  font-size: 22px;
+  color: #010101;
+  margin-bottom: 5px;
+}
+.ba-features__item p {
+  color: #898989;
+  font-size: 16px;
+}
+.ba-subscribe {
+  text-align: center;
+  background: #010101;
+  color: #FFF;
+  padding: 85px 0 140px;
+}
+.ba-title--color {
+  color: #fcdb00;
+  margin: 0;
+}
+.ba-title--color + p {
+  color: #898989;
+  font-size: 20px;
+  max-width: 740px;
+  margin: 15px auto 35px;
+}
+.ba-socials {
+  text-align: center;
+  padding: 75px 0;
+  margin-left: -25px;
+}
+.ba-socials a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #fcdb00;
+  color: #010101;
+  margin-right: 20px;
+}
+.ba-socials a i {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 8px;
+}
+.ba-socials a:hover {
+  background-color: #968200;
+  color: #9a9a9a;
+}
+.ba-footer {
+  padding-top: 35px;
+  border-top: 1px solid #fff;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  .ba-footer__items {
+    margin: auto;
+    text-align: center;
+  }
+}
+.ba-footer__items h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.ba-footer__items address {
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.ba-footer__items a {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  padding-bottom: 2px;
+}
+.ba-footer__items a:hover {
+  color: #fcdb00;
+}
+.ba-footer__items li {
+  list-style: none;
+}
+@media (min-width: 480px) and (max-width: 759px) {
+  .ba-footer__items li {
+    margin: auto;
+    display: inline-block;
+    text-align: center;
   }
 }
 
