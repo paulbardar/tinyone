@@ -1,0 +1,197 @@
+
+@import (less) "../css/normalize.css";
+@import (less) "../css/layout.css";
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+@primary-color:#fcdb00;
+@secondary-color:#010101;
+@small: ~"(max-width: 480px)";
+@medium: ~"(min-width: 768px)";
+@large: ~"(min-width: 960px)";
+
+body{
+	font: 400 20px/1.3 'PT Sans', Arial, sans-serif;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	display: inline-block;
+	border-radius:5px;
+	border: none;
+	min-width: 130px;
+	min-height: 48px;
+	line-height: 48px;
+	color: @secondary-color;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: @primary-color;
+	margin-left: 18px;
+	&:hover{
+		background-color: darken(@primary-color, 20%);
+		color: lighten(@secondary-color, 60%);
+	}
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	min-width: 65%;
+	border-radius:5px;
+	border: 5px solid transparent;
+	height: 50px;
+	padding: 20px 25px;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	@media (min-width:479px) and(max-width:759px){
+		text-align: center;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	&:focus{
+		outline: none;
+		border-color: @primary-color;
+		color: @secondary-color;
+	}
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 960px;
+}
+/* ba-home */
+.ba-home{
+	background: @primary-color;
+	color: @secondary-color;
+	padding: 52px 0 107px;
+}
+
+.ba-header{
+	height: 60px;
+	padding-bottom: 100px;
+	@media @small {
+		padding-bottom: 10px;
+	}
+}
+
+.ba-logo {
+	float: left;
+	@media @medium{
+		margin-right: 20px;
+	}
+	@media (min-width:480px) {
+		margin-right: 15px;
+	}
+	&:hover{
+		opacity:0.5;
+	}
+}
+.ba-menu{
+	margin: 0;
+	margin-top: 10px;
+	padding:0;
+	list-style:none;
+	@media @small{
+		display: none;
+	}
+
+
+	li{
+		float: left;
+		@media @small {
+		margin-top: 5px;
+		}
+		a{
+		display: block;
+		color: @secondary-color;
+		text-decoration: none;
+		font-size: 22px;
+		font-weight: 700;
+		padding-right: 60px;
+		@media @small{
+			padding-right: 15px;
+		}
+		&:hover{
+			color:#fff;
+		}
+		}
+	}
+}
+.ba-description__item{
+	max-width: 400px;
+	padding-top: 40px;
+	@media @small{
+		padding-right: 15px;
+		padding-top: 10px;
+		}
+	h2 {
+		margin-bottom: -5px;
+	}
+	h3{
+		font-size: 20px;
+		max-width: 320px;
+		color: lighten(@secondary-color, 20%);
+		font-weight: 400;
+
+	}
+	p{
+		font-size: 16px;
+		font-weight: 400;
+		color: lighten(@secondary-color, 35%);
+	}
+	.ba-icons{
+		margin-top: 32px;
+		font-size: 42px;
+		.fa-android{
+			padding:0 25px 0;
+		}
+	}
+}
+.ba-description__img{
+	position: relative;
+	margin-right: 53px;
+	@media @small and @medium{
+		margin-top: 10px;
+		margin-right: 0;
+	}
+}
