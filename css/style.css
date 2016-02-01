@@ -794,7 +794,7 @@ select:focus {
 }
 .ba-header {
   height: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 105px;
 }
 @media (max-width: 480px) {
   .ba-header {
@@ -842,7 +842,7 @@ select:focus {
   text-decoration: none;
   font-size: 22px;
   font-weight: 700;
-  padding-right: 60px;
+  padding-left: 83px;
 }
 @media (max-width: 480px) {
   .ba-menu li a {
