@@ -790,7 +790,7 @@ select:focus {
 .ba-home {
   background: #fcdb00;
   color: #010101;
-  padding: 52px 0 107px;
+  padding: 52px 0 102px;
 }
 .ba-header {
   height: 60px;
@@ -823,17 +823,13 @@ select:focus {
   padding: 0;
   list-style: none;
 }
-@media (max-width: 480px) {
-  .ba-menu {
-    display: none;
-  }
-}
 .ba-menu li {
   float: left;
 }
 @media (max-width: 480px) {
   .ba-menu li {
     margin-top: 5px;
+    padding-right: 15px;
   }
 }
 .ba-menu li a {
@@ -844,13 +840,108 @@ select:focus {
   font-weight: 700;
   padding-left: 83px;
 }
-@media (max-width: 480px) {
-  .ba-menu li a {
-    padding-right: 15px;
-  }
-}
 .ba-menu li a:hover {
   color: #fff;
+}
+.ba-menu-toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .ba-menu-toggle {
+    display: block;
+    float: right;
+    padding: 0 20px;
+  }
+  .ba-menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #968200;
+    position: relative;
+    margin: 20px 0;
+    transition: background 0.3s ease-in;
+  }
+  .ba-menu-toggle span:before,
+  .ba-menu-toggle span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #968200;
+    left: 0;
+    right: 0;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu-toggle span:before {
+    top: -10px;
+  }
+  .ba-menu-toggle span:after {
+    bottom: -10px;
+  }
+  .ba-menu {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: #968200;
+    margin-top: 0;
+    padding-top: 60px;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu li {
+    text-align: left;
+    padding-bottom: 20px;
+  }
+  .ba-menu li a {
+    display: block;
+    color: #010101;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+  body {
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu-opened {
+    -webkit-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+            transform: translateX(-150px);
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu-opened .ba-menu-toggle span {
+    background-color: transparent;
+  }
+  .ba-menu-opened .ba-menu-toggle span:before {
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-radius: 50%;
+  }
+  .ba-menu-opened .ba-menu-toggle span:after {
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    border-radius: 50%;
+  }
 }
 .ba-description__item {
   max-width: 400px;
@@ -895,11 +986,14 @@ select:focus {
 }
 /* ba-features */
 .ba-features {
-  padding: 100px 0 160px;
+  padding: 109px 0 149px;
   text-align: center;
 }
 .ba-features h2 {
   margin: 0;
+}
+.ba-features p {
+  margin-top: 8px;
 }
 .ba-features__textblock {
   max-width: 740px;
@@ -908,6 +1002,7 @@ select:focus {
 }
 .ba-features__item {
   text-align: left;
+  margin-top: 10px;
 }
 .ba-features__item i {
   float: left;
@@ -922,7 +1017,8 @@ select:focus {
 .ba-features__item h3 {
   font-size: 22px;
   color: #010101;
-  margin-bottom: 5px;
+  margin-top: 22px;
+  margin-bottom: 10px;
 }
 .ba-features__item p {
   color: #898989;
